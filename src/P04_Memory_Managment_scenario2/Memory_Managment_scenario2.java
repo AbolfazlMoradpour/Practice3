@@ -8,7 +8,8 @@ public class Memory_Managment_scenario2 {
     * */
         Memory_Managment_scenario2 sc2 = new Memory_Managment_scenario2();
         sc2.m1();
-
+        sc2.mB();
+        sc2.mA();
     }
     public void m1(){
         Student st1 = new Student();
@@ -26,6 +27,12 @@ public class Memory_Managment_scenario2 {
      * if want to print 10 in out we should create a new obj:
      * Example:
      * */
+    public void mA(){
+        Student st1 = new Student();
+        st1.i=10;
+        m3(st1);
+        System.out.println(st1.i);
+    }
     public void m3(Student st1){
         st1=new Student();           /*new obj from Student that didn't have any value (st1.i=0)*/
         st1.i+=10;                  /* i variable have value 0 and plus to 10*/
@@ -34,6 +41,12 @@ public class Memory_Managment_scenario2 {
     /*if want to don't change st1 value in future should use final
     * Example:
     * */
+    public void mB(){
+        Student st1 = new Student();
+        st1.i=10;
+        m4(st1);
+        System.out.println(st1.i);
+    }
     public void m4(final Student st1){
         st1.i+=10;
         System.out.println(st1.i);
